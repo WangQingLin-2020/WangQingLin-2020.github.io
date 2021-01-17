@@ -292,7 +292,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>747</span>
+      <span>714</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -313,7 +313,11 @@
     <div class="post-body" itemprop="articleBody">
         <h1 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h1><h2 id="什么是数据分析？"><a href="#什么是数据分析？" class="headerlink" title="什么是数据分析？"></a>什么是数据分析？</h2><p>数据分析就是将书序、统计学理论结合科学的统计方法（如线性回归分析、聚类分析、方法分析、时间序列分析等）对数据库中的数据、Excel数据、爬虫抓取的数据进行分析，从中提取有价值的信息形成结论并展示的过程。</p>
 <h2 id="数据分析方法"><a href="#数据分析方法" class="headerlink" title="数据分析方法"></a>数据分析方法</h2><p>一般分类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">数据分析--&gt;描述性数据分析;</span><br><span class="line">数据分析--&gt;探索性数据分析;</span><br><span class="line">数据分析--&gt;验证性数据分析;</span><br></pre></td></tr></table></figure>
+<pre class="mermaid">graph LR
+数据分析-->描述性数据分析;
+数据分析-->探索性数据分析;
+数据分析-->验证性数据分析;</pre>
+
 <p>技术层面：</p>
 <ol>
 <li><p>统计分析类</p>
@@ -327,7 +331,9 @@
 </li>
 </ol>
 <h2 id="数据分析工具"><a href="#数据分析工具" class="headerlink" title="数据分析工具"></a>数据分析工具</h2><p>主要是python</p>
-<h2 id="数据分析流程"><a href="#数据分析流程" class="headerlink" title="数据分析流程"></a>数据分析流程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">明确目的--&gt;获取数据--&gt;数据处理--&gt;数据分析--&gt;验证结果--&gt;数据展现--&gt;数据应用;</span><br></pre></td></tr></table></figure>
+<h2 id="数据分析流程"><a href="#数据分析流程" class="headerlink" title="数据分析流程"></a>数据分析流程</h2><pre class="mermaid">graph LR
+明确目的-->获取数据-->数据处理-->数据分析-->验证结果-->数据展现-->数据应用;</pre>
+
 <h3 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h3><ol>
 <li>公开的数据<ul>
 <li>常用数据公开网站：UCI、国家数据、CEIC、万得、搜数网、中国统计信息网、亚马逊Figshare、GitHub</li>
@@ -453,6 +459,15 @@
       </span>
     </span>
 </div>
+
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
 
     </div>
   </footer>
