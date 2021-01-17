@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+
+  <meta name="description" content="用户在进行网购消费的时候，往往都会超出预算，这是为什么呢？仅仅只是因为优惠卷的原因么？还是还有其他什么样的原因么？本文将从电商平台的PM们的角度来进行分析，让我们看看电商类平台的PM是不是一个个都是应用心理学家，看了本文，你说算了。本文将以品牌类电商——网易严选为例，进行分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="电商类产品经理真的一个个都是应用心理学家？——看了本文，你说了算！">
+<meta property="og:url" content="http://example.com/2021/01/17/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/%E7%94%B5%E5%95%86%E7%B1%BB%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9C%9F%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%AA%E9%83%BD%E6%98%AF%E5%BA%94%E7%94%A8%E5%BF%83%E7%90%86%E5%AD%A6%E5%AE%B6%EF%BC%9F%E2%80%94%E2%80%94%E7%9C%8B%E4%BA%86%E6%9C%AC%E6%96%87%EF%BC%8C%E4%BD%A0%E8%AF%B4%E4%BA%86%E7%AE%97%EF%BC%81/index.html">
+<meta property="og:site_name" content="XMU-Lin‘s Blog">
+<meta property="og:description" content="用户在进行网购消费的时候，往往都会超出预算，这是为什么呢？仅仅只是因为优惠卷的原因么？还是还有其他什么样的原因么？本文将从电商平台的PM们的角度来进行分析，让我们看看电商类平台的PM是不是一个个都是应用心理学家，看了本文，你说算了。本文将以品牌类电商——网易严选为例，进行分析">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/Desktop/VFi8ORp9NB3gYzoJtsTA.png">
+<meta property="og:image" content="http://example.com/Desktop/Fi6TBZCRTbKpBVlD.png!thumbnail.png">
+<meta property="og:image" content="http://example.com/Desktop/UJ1BGL7qSr7hPNae.png!thumbnail.png">
+<meta property="og:image" content="http://example.com/.com//image-20201105105615737.png">
+<meta property="og:image" content="http://example.com/.com//image-20201105105935718.png">
+<meta property="og:image" content="http://example.com/.com//image-20201105110508966.png">
+<meta property="og:image" content="https://uploader.shimo.im/f/qPd6R74T6y9ycHbw.png!thumbnail">
+<meta property="og:image" content="http://example.com/.com//Wefa2Lod8TSn7Qpq.png!thumbnail">
+<meta property="og:image" content="http://example.com/.com//hxGBn9XPurW1gLLh.png!thumbnail">
+<meta property="og:image" content="http://example.com/.com//nP0tgXNgtXxitK7X.png!thumbnail">
+<meta property="article:published_time" content="2021-01-17T08:40:06.000Z">
+<meta property="article:modified_time" content="2021-01-17T08:42:21.825Z">
+<meta property="article:author" content="XMU-Lin">
+<meta property="article:tag" content="产品思维">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/Desktop/VFi8ORp9NB3gYzoJtsTA.png">
+
+
+<link rel="canonical" href="http://example.com/2021/01/17/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/%E7%94%B5%E5%95%86%E7%B1%BB%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9C%9F%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%AA%E9%83%BD%E6%98%AF%E5%BA%94%E7%94%A8%E5%BF%83%E7%90%86%E5%AD%A6%E5%AE%B6%EF%BC%9F%E2%80%94%E2%80%94%E7%9C%8B%E4%BA%86%E6%9C%AC%E6%96%87%EF%BC%8C%E4%BD%A0%E8%AF%B4%E4%BA%86%E7%AE%97%EF%BC%81/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>电商类产品经理真的一个个都是应用心理学家？——看了本文，你说了算！ | XMU-Lin‘s Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">XMU-Lin‘s Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%B5%E5%95%86%E7%B1%BB%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9C%9F%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%AA%E9%83%BD%E6%98%AF%E5%BA%94%E7%94%A8%E5%BF%83%E7%90%86%E5%AD%A6%E5%AE%B6%EF%BC%9F%E2%80%94%E2%80%94%E7%9C%8B%E4%BA%86%E6%9C%AC%E6%96%87%EF%BC%8C%E4%BD%A0%E8%AF%B4%E4%BA%86%E7%AE%97%EF%BC%81"><span class="nav-number">1.</span> <span class="nav-text">电商类产品经理真的一个个都是应用心理学家？——看了本文，你说了算！</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BD%9C%E6%8F%90%E9%AB%98%E8%BD%AC%E5%8C%96%E7%8E%87"><span class="nav-number">1.1.</span> <span class="nav-text">｜提高转化率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BD%9C%EF%BD%9C-%E4%B8%8D%E6%98%8E%E7%A1%AE%E7%94%A8%E6%88%B7%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">｜｜ 不明确用户：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BD%9C%EF%BD%9C%E6%98%8E%E7%A1%AE%E7%94%A8%E6%88%B7"><span class="nav-number">1.1.2.</span> <span class="nav-text">｜｜明确用户</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BD%9C%E6%8F%90%E9%AB%98%E5%AE%A2%E5%8D%95%E4%BB%B7"><span class="nav-number">1.2.</span> <span class="nav-text">｜提高客单价</span></a></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XMU-Lin"
+      src="/images/profile.jpg">
+  <p class="site-author-name" itemprop="name">XMU-Lin</p>
+  <div class="site-description" itemprop="description">产品经理</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+        <div class="back-to-top animated">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/17/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/%E7%94%B5%E5%95%86%E7%B1%BB%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9C%9F%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%AA%E9%83%BD%E6%98%AF%E5%BA%94%E7%94%A8%E5%BF%83%E7%90%86%E5%AD%A6%E5%AE%B6%EF%BC%9F%E2%80%94%E2%80%94%E7%9C%8B%E4%BA%86%E6%9C%AC%E6%96%87%EF%BC%8C%E4%BD%A0%E8%AF%B4%E4%BA%86%E7%AE%97%EF%BC%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/profile.jpg">
+      <meta itemprop="name" content="XMU-Lin">
+      <meta itemprop="description" content="产品经理">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XMU-Lin‘s Blog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          电商类产品经理真的一个个都是应用心理学家？——看了本文，你说了算！<a href="https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name/_posts/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/%E7%94%B5%E5%95%86%E7%B1%BB%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9C%9F%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%AA%E9%83%BD%E6%98%AF%E5%BA%94%E7%94%A8%E5%BF%83%E7%90%86%E5%AD%A6%E5%AE%B6%EF%BC%9F%E2%80%94%E2%80%94%E7%9C%8B%E4%BA%86%E6%9C%AC%E6%96%87%EF%BC%8C%E4%BD%A0%E8%AF%B4%E4%BA%86%E7%AE%97%EF%BC%81.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-01-17 16:40:06 / 修改时间：16:42:21" itemprop="dateCreated datePublished" datetime="2021-01-17T16:40:06+08:00">2021-01-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">产品经理</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">用户在进行网购消费的时候，往往都会超出预算，这是为什么呢？仅仅只是因为优惠卷的原因么？还是还有其他什么样的原因么？本文将从电商平台的PM们的角度来进行分析，让我们看看电商类平台的PM是不是一个个都是应用心理学家，看了本文，你说算了。本文将以品牌类电商——网易严选为例，进行分析</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="电商类产品经理真的一个个都是应用心理学家？——看了本文，你说了算！"><a href="#电商类产品经理真的一个个都是应用心理学家？——看了本文，你说了算！" class="headerlink" title="电商类产品经理真的一个个都是应用心理学家？——看了本文，你说了算！"></a>电商类产品经理真的一个个都是应用心理学家？——看了本文，你说了算！</h1><p><img src="/.com//../../../../Desktop/VFi8ORp9NB3gYzoJtsTA.png" alt="img"></p>
+<blockquote>
+<p>用户在进行网购消费的时候，往往都会超出预算，这是为什么呢？仅仅只是因为优惠卷的原因么？还是还有其他什么样的原因么？本文将从电商平台的PM们的角度来进行分析，让我们看看电商类平台的PM是不是一个个都是应用心理学家，看了本文，你说算了。本文将以品牌类电商——网易严选为例，进行分析。</p>
+</blockquote>
+<p>我们在分析电商类平台之前，首先，不得不提的一个概念就是成交金额（Gross Merchandise Volume，GMV），对于电商平台来说，GMV就是网站成交金额。GMV是衡量一个电商平台是否能够良性发展的重要指标之一，也是衡量一家电商平台竞争力和发展速度的重要指标之一。一般来对于电商平台来说，GMV=用户数<em>转化率</em>客单价，用户数、转化率、客单价三者的变化都会<strong>正向影响</strong>营收水平的变化。那么PM是如何从<strong>产品侧</strong>提高GMV的，本文重点解析<strong>转化率</strong>以及<strong>客单价</strong>两个方面。</p>
+<p>为了使分析更简单、方便、明确，我们将目标用户设置为新用户。</p>
+<p><strong>目标用户：</strong>新用户（已下载APP，注册账号，但并未进行第一次购买的用户）</p>
+<h2 id="｜提高转化率"><a href="#｜提高转化率" class="headerlink" title="｜提高转化率"></a>｜提高转化率</h2><p>对于电商平台来说，主要分为两种类型的用户，分别是<strong>明确用户</strong>和<strong>不明确用户</strong>。<strong>明确用户</strong>是很明显知道自己需要的是什么，想要买什么，而<strong>不明确用户</strong>与之相反，没有明确的目标。以PM的角度来说，<strong>对于明确用户**</strong>需要加速该类型用户的消费决策流程并完成最终的付款**，而不明确用户则更依赖于运营侧（活动、折扣、氛围等）去引导。</p>
+<p><img src="/.com//../../../../Desktop/Fi6TBZCRTbKpBVlD.png!thumbnail.png" alt="img"></p>
+<h3 id="｜｜-不明确用户："><a href="#｜｜-不明确用户：" class="headerlink" title="｜｜ 不明确用户："></a><strong>｜｜ 不明确用户：</strong></h3><p>虽然目标不明确的用户依赖于<strong>运营侧</strong>，但是网易严选的PM在<strong>产品侧</strong>也做了很多努力。利用<strong>AIDTAS模型</strong>，对不明确的用户进行分析可以发现，该类型的新用户<strong>对平台的商品还没有产生很大的兴趣，其购买欲望相对低</strong>。针对目标不明确的用户，网易严选的PM通过对于该类用户的<strong>第一触点页面——首页</strong>进行设计，来提高<strong>该类型用户的购买兴趣，提高进行购买的欲望</strong>。</p>
+<p><strong>备注</strong>：AIDTAS模型，是根据用户在消费决策当中，都会经历的6个心理阶段而建立的模型，分别是第一阶段注意力阶段（<strong>Attention</strong>），第二阶段兴趣阶段（<strong>Interest</strong>），第三个阶段欲望阶段（<strong>Desire</strong>），第四个阶段信任阶段（<strong>Trust</strong>），第五个阶段行动阶段（<strong>Action</strong>），第六阶段分享阶段（<strong>Share</strong>）。</p>
+<p>我们将从PM的角度来分析如何来提升购买转化率。</p>
+<blockquote>
+<p>运用的心理学效应：七秒钟色彩定律，暗示效应，场化效应、潘多拉魔盒效应、稀缺性原理</p>
+</blockquote>
+<p><strong>整体：</strong>利用<strong>七秒钟色彩定律</strong>和<strong>场化效应</strong>来营造整体氛围：</p>
+<ul>
+<li>利用<strong>红色</strong>热情奔放的特质，来作为整个页面的主色调，影响用户对于该平台的认知，构建整体氛围。</li>
+<li>运用<strong>视觉诱惑元素</strong>和<strong>视觉对比效果</strong>打造视觉中心，抓取用户的注意力，让用户看到PM想让用户看到的内容。</li>
+</ul>
+<p><strong>局部：</strong></p>
+<p>1、多维度刺激消费者兴趣，提高用户停留时间，提高用户的兴趣。在Banner部分，分别有三个内容，分别是双十一爆款底价；全年底价，就现在；CEO组团直播；利用这三个文案来提升用户的兴趣，点燃用户想要消费的欲望。<strong>如CEO组团直播内容，运用带有网易的CEO的正面图像，来打造视觉中新，提高用户的兴趣（潘多拉魔盒效应：制造神秘感，刺激用户的好奇心和求知欲，让用户好奇CEO直播，在直播什么呢？什么东西能让网易CEO来直播呢？）诱导用户进行浏览。</strong></p>
+<p>2、浮窗内容“新人106礼包限时领取｜41:47:48”。浮窗能够让用户一眼就注意到，标题上时间精确到秒，利用<strong>稀缺性原理</strong>，让用感受到此次优惠的<strong>唯一性</strong>和<strong>时限性</strong>，产生紧迫感，提高用户兴趣，诱导新用户进行消费。</p>
+<p>3、底栏的“推荐”：运用<strong>视觉诱惑元素</strong>和<strong>视觉对比的手法</strong>，对用户进行心理暗示（暗示用户，这边还有好东西），提高用户兴趣，刺激用户进行浏览。</p>
+<p><img src="/.com//../../../../Desktop/UJ1BGL7qSr7hPNae.png!thumbnail.png" alt="img"></p>
+<h3 id="｜｜明确用户"><a href="#｜｜明确用户" class="headerlink" title="｜｜明确用户"></a>｜｜明确用户</h3><p>利用<strong>AIDTAS模型</strong>，对明确目标的用户进行分析可以发现，该类型的用户是<strong>已经产生明确的目标并想要进行购买的，</strong>对于平台来说<strong>，应该是加速用户进行消费决策的过程，快速让用户对于平台的商品产生信任感，刺激用户进行消费的欲望，并让用户完成临门一脚的付款过程。</strong></p>
+<p><strong>明确用户</strong>进行消费的具体流程如Fig 1所示，最主要的点页面分别是<strong>商品列表页</strong>、<strong>商品详情页</strong>、<strong>购物车列表页</strong>、<strong>收货地址页</strong>和<strong>订单详情页**</strong>。**以下将从这几个页面来说明PM是如何来加速新用户进行消费的过程。</p>
+<ul>
+<li>商品列表页</li>
+</ul>
+<blockquote>
+<p>运用的心理学效应：七秒钟色彩定律，暗示效应，价值/价格锚定，社会从众效应，登门槛效应</p>
+</blockquote>
+<p><strong>整体</strong>：整个页面以白色作为底色，给人创造出一种自由感、空间感，让客户感觉<strong>产品种类相当丰富</strong>，可以任用户进行挑选。再辅以<strong>商品图片</strong>作为<strong>视觉诱导因素</strong>，打造视觉中心，让消费者第一时间看到产品，以及产品页面上的“爆品”二字。</p>
+<p><strong>局部</strong>：1、页面顶部的其他类型的产品选择，简化用户选择进行其他的操作，减少用户的消费流程<strong>逆向进行（比如说用户想要该类型的其他商品，需要用户退出当前触点页面，进入上一级页面）</strong>的操作，进一步诱导消费者在消费流程中前向进行，加速消费进程。</p>
+<p>2、综合、价格、上新、筛选：四个选项都是用户在进行消费决策的时候最重要的因素，替用户考虑，帮助用户进行决策，方便消费者进行挑选，加速用户决策过程。</p>
+<p>3、种类、使用场景、包装：利用<strong>场景暗示效应</strong>，让用户进一步细化产品的使用场景，让用户联想到在该产品在用户设定的场景中进行使用的画面，描绘用户的期待，暗示用户如果购买该商品，就能快速达到用户想要的场景，利用这样的手段进一步诱导用户进行消费。</p>
+<p>4、爆款：利用<strong>色彩对比原理以及文字内容</strong>对用户进行暗示，暗示该商品是最好的、最受欢迎的（首因效应），大家都喜欢（社会从众效应），进一步诱导用户进行浏览以及消费，诱导用户进行消费。<strong>备注：如果有平台数据的话，一定能发现具有“爆款”二字的商品，其被用户点击的次数和概率都会更高。</strong></p>
+<p>5、含40%散养鸡蛋，芝士蛋糕800克：利用<strong>精确化的数值</strong>来对商品进行<strong>价值锚定</strong>，让用户感受到该商品的营养价值，提高用户信任度。</p>
+<p>6、分期免息：利用压力分解，分拆成用户感知较小或者感知不到的压力（<strong>登门槛效应</strong>），降低用户进行消费门槛，诱导用户进行消费</p>
+<p>7、¥42.8 低至¥37元起：利用<strong>价格锚定效应</strong>，让用户更能感受到该商品的优惠以及价值，提高消费者信任度，诱导进行消费。</p>
+<p><img src="/.com//image-20201105105615737.png" alt="image-20201105105615737"></p>
+<ul>
+<li>商品详情页</li>
+</ul>
+<blockquote>
+<p><strong>运用的心理学效应：七秒钟色彩定律，暗示效应，从众效应，权威效应，</strong></p>
+</blockquote>
+<p>商品详情页面分别由四个主要模块组成，分别是商品简介、商品评价、商品详情、推荐。</p>
+<p>1、“爆”累计好评数9万+：利用<strong>视觉对比效果</strong>打造视觉中心，对消费者进行暗示，暗示该产品在我们的平台是卖的最好的（<strong>暗示效应</strong>），”累计销售9万—+“能展现超高的人气（从众效应），与消费者建立信任，消除购买障碍。</p>
+<p>2、新人特价：利用<strong>价格锚定</strong>以及<strong>“正在抢购中”</strong>的场景建立，让新用户感受到该商品的紧俏以及人气，建立与用户之间的信任，消除消费障碍，提高消费者的消费欲望。</p>
+<p>3、商品评价：利用<strong>评论文字</strong>与<strong>商品图片</strong>的同时展现形式来突出显示其他消费者的评论，抓取用户的注意力，该模块可以向横移滑动，方便消费者翻阅其他评论。良好的评论展现了商品的质量，消除用户进行购买的障碍，与用户建立信任，从而刺激用户进行消费。</p>
+<p>4、严选承诺：在商品详情页的头部加入“严选承诺”，提高消费者对于商品的信任。通过平台来对商品进行背书（<strong>权威效应</strong>），建立起与用户之间的信任、进一步消除消费购买的后顾之忧。</p>
+<p><img src="/.com//image-20201105105935718.png" alt="image-20201105105935718"></p>
+<ul>
+<li>购物车列表页</li>
+</ul>
+<p>进入到购物车列表页的触点页面，证明用户已经想要购买该商品，对于PM来说，该阶段最主要的目的<strong>就是加快用户的消费过程，尽量消除一切可能影响用户进入到下一流程页面的不积极因素，完成临门一脚的购买。</strong></p>
+<blockquote>
+<p><strong>运用的心理学效应：七秒钟色彩定律，稀缺性原理，从众效应，权威效应，</strong></p>
+</blockquote>
+<p>1、新人优惠、新人特价：利用<strong>新人优惠</strong>以及<strong>新人特价</strong>的<strong>身份描述</strong>让用户感受到此次消费优惠的<strong>唯一性</strong>以及<strong>身份所带来的特权</strong>，制造紧迫感，进一步刺激新用户的消费欲望。</p>
+<p>2，红色“结算”：利用色彩视觉以及字体对于消费者进行心理暗示，让用户的消费过程上具有逻辑的连贯性，消除其他因素的干扰，加速购买流程。</p>
+<p><img src="/.com//image-20201105110508966.png" alt="image-20201105110508966"></p>
+<ul>
+<li>收货地址页</li>
+</ul>
+<p>该页面是新用户进行消费一定会进行的触点页面，该页面的主要功能就是填写用户的收货信息，所以对于PM来说，该页面的主要目的就是让用户填写资料，要尽可能的简单、智能化，让用户能够进行傻瓜式的填写，减少繁琐的操作，以防过度消耗用户耐心，而退出消费流程。为了减少新用户新建地址信息的繁琐，网易严选采用<strong>智能选择</strong>（傻瓜式）的操作，让新用户更快的对收货地址的信息进行填写，提高用户体验，减少其他因素的干扰，加快消费流程。</p>
+<p>​        <img src="https://uploader.shimo.im/f/qPd6R74T6y9ycHbw.png!thumbnail" alt="img" style="zoom:25%;">      </p>
+<ul>
+<li>详情支付页</li>
+</ul>
+<blockquote>
+<p><strong>运用的心理学效应：七秒钟色彩定律，暗示效应，价值/价格锚定，占便宜心理，损失厌恶心理。从众效应，权威效应，</strong></p>
+</blockquote>
+<p>1、多种支付方式：多种支付方式消除消费者的购买障碍，为用户提高消费体验，扫除摆在用户面前的障碍。</p>
+<p>2、明天20:00，预计11月4号送到：通过描述商品的送达时间，进行场景暗示，暗示消费者购买我们的商品，就可以以最快的时间拥有它，提高消费者的期待，进一步加强消费者付款的决心。</p>
+<p>3、¥13.80：让：价格锚定的高频率出现，可以不断的强化和暗示消费者，此件商品的价值以及巨大的优惠额度。</p>
+<p>4、放心，收货后您仍可以改变主意：承担用户的购买风险承诺，让用户消除购买的后顾之忧（损失厌恶心理），在消费心理上加上一道保险。</p>
+<p>5、勾选开通，本单立减¥5：进一步诱惑新用户进行购买，成进行最后一道保险。</p>
+<p>6、红色“提交订单”：利用色彩视觉以及字体对于消费者进行心理暗示，让用户的消费过程上具有逻辑的连贯性，消除其他因素的干扰。</p>
+<p>​        <img src="/.com//Wefa2Lod8TSn7Qpq.png!thumbnail" alt="img">      </p>
+<h2 id="｜提高客单价"><a href="#｜提高客单价" class="headerlink" title="｜提高客单价"></a>｜提高客单价</h2><p>客单价即顾客平均购买商品的金额，要想提高客单价最重要的就是提高消费频次以及单次购买金额。对于网易严选平台的PM来说，既要在保证用户进行消费的同时，又要尽可能地提高用户消费频次以及单次消费金额。网易严选分别从商品详情页、以及购物车页上来提高用户客单价。</p>
+<p>1、商品详情页</p>
+<blockquote>
+<p><strong>运用的心理学效应：七秒钟色彩定律，暗示效应，价值/价格锚定，占便宜心理，损失厌恶心理。从众效应，权威效应，</strong></p>
+</blockquote>
+<p>网易严选利用损失厌恶效应，在商品详情页面上增加新人满减红包、满额免邮以及浮窗满减卷等模块来提高用户的消费频次</p>
+<p>相关推荐：跟淘宝等电商不同，网易严选是将相关推荐放在了商品详情页的最下方，这样就可以在用户看完商品的推荐后，可以看到平台为用户推荐的商品，进一步提高其他商品的曝光率，增加购买商品的几率。</p>
+<p>​        <img src="/.com//hxGBn9XPurW1gLLh.png!thumbnail" alt="img">      </p>
+<p>2、购物车页面</p>
+<p>网易严选在新用户的购物车里面已经放置了三到四件赠品，但都需要需要满足一定的金额才能获得该赠品。网易严选利用鸟笼效应的方法，来进一步提高新用户的消费频次。并在整个页面上，多个多位放置优惠减满减信息，诱导用户进行消费。</p>
+<p>​        <img src="/.com//nP0tgXNgtXxitK7X.png!thumbnail" alt="img">      </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4/" rel="tag"># 产品思维</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/12/30/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%8A%80%E6%9C%AF/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/" rel="prev" title="数据分析方法">
+                  <i class="fa fa-chevron-left"></i> 数据分析方法
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2020.12.12 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="Alec"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">XMU-Lin</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">13k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8.7.0/dist/mermaid.min.js', () => {
+    mermaid.init({
+      theme    : 'neutral',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    }, '.mermaid');
+  }, window.mermaid);
+}
+</script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
